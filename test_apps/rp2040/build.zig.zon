@@ -1,0 +1,21 @@
+.{
+    .name = "examples/raspberrypi/rp2040",
+    .version = "0.0.0",
+    .dependencies = .{
+        .@"microzig/build" = .{ .path = "../../build" },
+        .@"microzig/bsp/raspberrypi/rp2040" = .{ .path = "../../bsp/raspberrypi/rp2040" },
+        .@"segger-rtt" = .{
+            .url = "git+https://github.com/vesim987/segger-rtt#5bd11bed3148692d390d598b29e249052cc84b51",
+            .hash = "12203c3a31499e328c790d7628cfe6e8fc6eaf5e1fd3fe203309621e8319e856ccaf",
+        },
+    },
+
+    .paths = .{
+        "LICENSE",
+        "README.md",
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "scripts",
+    },
+}

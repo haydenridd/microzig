@@ -9,3 +9,4 @@ microzig-deploy/
 __pycache__/
 .venv
 boxzer-out
+.zig-install
