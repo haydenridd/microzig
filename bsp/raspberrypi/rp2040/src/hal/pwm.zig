@@ -7,7 +7,7 @@ const log = std.log.scoped(.pwm);
 pub const Config = struct {};
 
 fn get_regs(comptime slice: u32) *volatile Regs {
-    @import("std").debug.assert(slice < 8);
+    std.debug.assert(slice < 8);
     const PwmType = microzig.chip.types.peripherals.PWM;
     const reg_diff = comptime @offsetOf(PwmType, "CH1_CSR") - @offsetOf(PwmType, "CH0_CSR");
     return @as(*volatile Regs, @ptrFromInt(@intFromPtr(PWM) + reg_diff * slice));
