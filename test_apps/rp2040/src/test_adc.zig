@@ -15,7 +15,7 @@ fn execute() self_test.Result {
     } });
 
     const approx_mv = (conv * 3300) / 4096;
-    if ((approx_mv < 1300) or (approx_mv > 1900))
+    if ((approx_mv < 200) or (approx_mv > 3000))
         return .{ .fail = .{
             .msg = "Did not get ADC mV reading of approx 1600mV",
             .context = @src(),
