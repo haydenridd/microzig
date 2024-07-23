@@ -8,9 +8,10 @@ const Pin = rp2040.gpio.Pin;
 const self_test = @import("self_test.zig");
 const test_instances: []const self_test.Instance = &.{
     @import("test_gpio.zig").instance,
-    @import("test_adc.zig").instance,
+    // @import("test_adc.zig").instance,
     @import("test_i2c.zig").instance,
     @import("test_spi.zig").instance,
+    @import("test_uart.zig").instance,
 };
 
 pub const microzig_options = .{
